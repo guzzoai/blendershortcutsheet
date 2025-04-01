@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blender Shortcuts Cheatsheet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark-ember layout-default"> <!-- Default classes (Dark Ember theme default) -->
+
+    <header>
+        <div class="header-title-group">
+            <img src="blender_logo_color.png" alt="Blender Logo" id="header-logo">
+            <h1>Blender Shortcuts Cheatsheet</h1>
+        </div>
+        <div class="controls">
+            <label for="layout-select">Layout:</label>
+            <select id="layout-select">
+                <option value="layout-compact">Compact</option>
+                <option value="layout-default" selected>Default</option>
+                <option value="layout-wide">Wide</option>
+            </select>
+
+            <label for="theme-select">Theme:</label>
+            <select id="theme-select">
+                <option value="theme-dark-ember" selected>Dark Ember</option> <!-- Set Dark Ember as default selected -->
+                <option value="theme-blender">Blender</option>
+                <option value="theme-dark">Dark</option>
+                <option value="theme-light">Light</option>
+                <option value="theme-synthwave">Synthwave</option>
+                <option value="theme-ocean">Ocean</option>
+                <option value="theme-black-grey">Black & Grey</option>
+                <option value="theme-deep-space">Deep Space</option>
+                <option value="theme-charcoal">Charcoal</option>
+                <option value="theme-midnight">Midnight</option>
+                <option value="theme-slate">Slate</option>
+                <option value="theme-forest-night">Forest Night</option>
+            </select>
+
+            <div id="legend-container">
+                <button id="legend-toggle">Legend</button>
+                <div id="legend-popup" class="hidden">
+                    <!-- Legend content moved here -->
+                    <h2>Legend</h2>
+                    <ul>
+                        <li><strong>LMB</strong> = Left Mouse Button</li>
+                        <li><strong>MMB</strong> = Middle Mouse Button</li>
+                        <li><strong>RMB</strong> = Right Mouse Button</li>
+                        <li><strong>Ctrl</strong> (Windows) = <strong>Cmd</strong> (Mac)</li>
+                        <li><strong>Alt</strong> (Windows) = <strong>Option</strong> (Mac)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+<main id="cheatsheet-container">
+    <!-- Legend section removed from main -->
+
+        <section id="common">
+            <h2>Common Shortcuts</h2>
+            <table>
+                <thead>
+                    <tr><th>Action</th><th>Shortcut</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Search Menu</td><td>F3</td></tr>
+                    <tr><td>Tools</td><td>T</td></tr>
+                    <tr><td>Properties</td><td>N</td></tr>
+                    <tr><td>Select All</td><td>A</td></tr>
+                    <tr><td>Move</td><td>G</td></tr>
+                    <tr><td>Rotate</td><td>R</td></tr>
+                    <tr><td>Scale</td><td>S</td></tr>
+                    <tr><td>Deselect</td><td>Alt + A</td></tr>
+                    <tr><td>Hide/Unhide</td><td>H</td></tr>
+                    <tr><td>Unhide All</td><td>Alt + H</td></tr>
+                    <tr><td>Hide All Except Selected</td><td>Shift + H</td></tr>
+                    <tr><td>Save</td><td>Ctrl + S</td></tr>
+                    <tr><td>Undo</td><td>Ctrl + Z</td></tr>
+                    <tr><td>Redo</td><td>Shift + Ctrl + Z</td></tr>
+                    <tr><td>Rename</td><td>F2</td></tr>
+                    <tr><td>View Selected/Focus</td><td>Numpad . (Period)</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="navigation">
+            <h2>Navigation (3D Viewport)</h2>
+            <table>
+                <thead>
+                    <tr><th>Action</th><th>Shortcut</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Orbit/Rotate View</td><td>MMB + Drag / Gizmo</td></tr>
+                    <tr><td>Pan/Move View</td><td>Shift + MMB + Drag / Gizmo</td></tr>
+                    <tr><td>Zoom</td><td>Scroll Wheel / Ctrl + MMB + Drag / Gizmo</td></tr>
+                    <tr><td>View Pie Menu</td><td>` / ~ (Backtick / Tilde)</td></tr>
+                    <tr><td>Switch Views</td><td>Alt + MMB + Drag</td></tr>
+                    <tr><td>Show All</td><td>Home</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="numpad-views">
+            <h2>Number Pad Views</h2>
+            <table>
+                <thead>
+                    <tr><th>View</th><th>Shortcut</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Local View</td><td>/</td></tr>
+                    <tr><td>Isolate</td><td>/</td></tr>
+                    <tr><td>Top</td><td>7</td></tr>
+                    <tr><td>Orbit Up</td><td>8</td></tr>
+                    <tr><td>Orbit Opposite</td><td>9</td></tr>
+                    <tr><td>Orbit Left</td><td>4</td></tr>
+                    <tr><td>Perspective/Orthographic</td><td>5</td></tr>
+                    <tr><td>Orbit Right</td><td>6</td></tr>
+                    <tr><td>Front</td><td>1</td></tr>
+                    <tr><td>Orbit Down</td><td>2</td></tr>
+                    <tr><td>Right</td><td>3</td></tr>
+                    <tr><td>Camera</td><td>0</td></tr>
+                    <tr><td>View Selected / Focus</td><td>.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="object-mode">
+            <h2>Object Mode</h2>
+            <table>
+                <thead>
+                    <tr><th>Action</th><th>Shortcut</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Toggle Object/Edit Mode</td><td>Tab</td></tr>
+                    <tr><td>Mode Pie Menu</td><td>Ctrl + Tab</td></tr>
+                    <tr><td>Delete</td><td>X</td></tr>
+                    <tr><td>Add Object</td><td>Shift + A</td></tr>
+                    <tr><td>Adjust Last Operation</td><td>F9</td></tr>
+                    <tr><td>Move/Rotate/Scale</td><td>G / R / S</td></tr>
+                    <tr><td>Transform Axis (Global)</td><td>X / Y / Z</td></tr>
+                    <tr><td>Transform Axis (Local)</td><td>X,X / Y,Y / Z,Z</td></tr>
+                    <tr><td>Transform Plane</td><td>Shift + X / Y / Z</td></tr>
+                    <tr><td>Clear Location / Rotation / Scale</td><td>Alt + G / R / S</td></tr>
+                    <tr><td>Apply Transform</td><td>Ctrl + A</td></tr>
+                    <tr><td>Trackball Rotate</td><td>R, R</td></tr>
+                    <tr><td>Precise Move</td><td>Hold Shift</td></tr>
+                    <tr><td>Snapping</td><td>Hold Ctrl</td></tr>
+                    <tr><td>Duplicate</td><td>Shift + D</td></tr>
+                    <tr><td>Duplicate Linked</td><td>Alt + D</td></tr>
+                    <tr><td>Repeat Last Action</td><td>Shift + R</td></tr>
+                    <tr><td>Join Objects</td><td>Ctrl + J</td></tr>
+                    <tr><td>Select Object / Multiple</td><td>LMB / Shift + LMB</td></tr>
+                    <tr><td>Box / Circle / Lasso Select</td><td>B / C / Ctrl + RMB</td></tr>
+                    <tr><td>Invert Selection</td><td>Ctrl + I</td></tr>
+                    <tr><td>Select Children / Parent</td><td>] / [</td></tr>
+                    <tr><td>Extend Parent/Child Selection</td><td>Shift + ] / [</td></tr>
+                    <tr><td>Parent to Active / Clear Parent</td><td>Ctrl + P / Alt + P</td></tr>
+                    <tr><td>Solid/Wireframe View</td><td>Shift + Z</td></tr>
+                    <tr><td>X-Ray View</td><td>Alt + Z</td></tr>
+                    <tr><td>Link Materials/Data</td><td>Ctrl + L</td></tr>
+                    <tr><td>Move 3D Cursor</td><td>Shift + RMB</td></tr>
+                    <tr><td>Snap Menu</td><td>Shift + S</td></tr>
+                    <tr><td>Pivot Point Menu</td><td>.</td></tr>
+                    <tr><td>Proportional Editing</td><td>O</td></tr>
+                    <tr><td>Change Influence</td><td>Scroll Wheel</td></tr>
+                    <tr><td>Affect Multiple Objects</td><td>Hold Alt (N Panel)</td></tr>
+                    <tr><td>Annotate / Erase Annotation</td><td>Hold D + LMB / RMB</td></tr>
+                    <tr><td>Quick Favorites</td><td>Q</td></tr>
+                    <tr><td>Batch Rename</td><td>Ctrl + F2</td></tr>
+                    <tr><td>Move to Collection</td><td>M</td></tr>
+                    <tr><td>Add Subdivision Modifier</td><td>Ctrl + 1–5</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="edit-mode-modeling">
+            <h2>Edit Mode (Modeling)</h2>
+            <table>
+                <thead>
+                    <tr><th>Action</th><th>Shortcut</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Vertex / Edge / Face Menu</td><td>Ctrl + V / E / F</td></tr>
+                    <tr><td>Extrude</td><td>E</td></tr>
+                    <tr><td>Extrude to Cursor</td><td>Ctrl + RMB</td></tr>
+                    <tr><td>Extrude Menu</td><td>Alt + E</td></tr>
+                    <tr><td>Bevel / Vertex Bevel</td><td>Ctrl + B / Ctrl + Shift + B</td></tr>
+                    <tr><td>Inset / Inset Individual</td><td>I / I, I</td></tr>
+                    <tr><td>Loop Cut / Count</td><td>Ctrl + R / Scroll Wheel</td></tr>
+                    <tr><td>Slide Loop / Vertex</td><td>G, G</td></tr>
+                    <tr><td>Knife Tool</td><td>K</td></tr>
+                    <tr><td>Shrink/Fatten</td><td>Alt + S</td></tr>
+                    <tr><td>Shear</td><td>Shift + Ctrl + Alt + S</td></tr>
+                    <tr><td>To Sphere</td><td>Shift + Alt + S</td></tr>
+                    <tr><td>Fill Face / New Edge</td><td>F</td></tr>
+                    <tr><td>Vertex Connect Path</td><td>J</td></tr>
+                    <tr><td>Separate</td><td>P</td></tr>
+                    <tr><td>Merge / Split / Rip</td><td>M / Y / V</td></tr>
+                    <tr><td>Recalculate Normals</td><td>Shift + N</td></tr>
+                    <tr><td>Normals Menu</td><td>Alt + N</td></tr>
+                    <tr><td>Edge Crease</td><td>Shift + E</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="edit-mode-selection">
+            <h2>Edit Mode (Selection)</h2>
+            <table>
+                <thead>
+                    <tr><th>Action</th><th>Shortcut</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Vertex / Edge / Face Mode</td><td>1 / 2 / 3</td></tr>
+                    <tr><td>Select Linked at Cursor</td><td>L</td></tr>
+                    <tr><td>Select Shortest Path</td><td>Ctrl + LMB</td></tr>
+                    <tr><td>Select Edge Loop</td><td>Alt + LMB</td></tr>
+                    <tr><td>Select Edge Ring</td><td>Ctrl + Alt + LMB</td></tr>
+                    <tr><td>Select Similar</td><td>Shift + G</td></tr>
+                    <tr><td>Grow/Shrink Selection</td><td>Ctrl + + / -</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

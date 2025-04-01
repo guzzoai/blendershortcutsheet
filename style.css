@@ -1,0 +1,446 @@
+/* Basic Reset & Root Variables */
+:root {
+    /* Default Dark Theme Colors (User Specified) */
+    --bg-color: #1e1e1e; /* User: Background */
+    --text-color: #dcdcdc; /* User: Text */
+    --header-bg: #252526; /* User: Header */
+    --table-header-bg: #333333; /* User: Table Header */
+    --table-border-color: #4a4a4e; /* Keeping previous border or adjust if needed */
+    --accent-color: #4ec9b0; /* User: Accent */
+    --link-color: #569cd6; /* Adjusted link color for visibility */
+
+    /* Layout Spacing Variables (Default) */
+    --section-gap: 20px;
+    --table-padding: 10px;
+    --base-font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: var(--base-font-size);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding-bottom: 50px; /* Ensure space at bottom */
+}
+
+/* Theme Switching */
+body.theme-light {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: #f0f0f0;
+    --table-header-bg: #e2e2e2;
+    --table-border-color: #cccccc;
+    --accent-color: #005a9e;
+    --link-color: #0066cc;
+}
+
+/* Synthwave Theme */
+body.theme-synthwave {
+    --bg-color: #2c1f3a; /* User: Background */
+    --text-color: #f0e6ff; /* User: Text */
+    --header-bg: #1e152a; /* User: Header */
+    --table-header-bg: #4a3a5a; /* User: Table Header */
+    --table-border-color: #6a5a7a; /* Adjusted border */
+    --accent-color: #ff6ac1; /* User: Accent */
+    --link-color: #ff9afb; /* Adjusted link color */
+}
+/* Adjust Synthwave zebra striping */
+body.theme-synthwave tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.06); /* Slightly different striping for Synthwave */
+}
+
+/* Ocean Theme */
+body.theme-ocean {
+    --bg-color: #e0f7fa; /* User: Background */
+    --text-color: #004d40; /* User: Text */
+    --header-bg: #b2ebf2; /* User: Header */
+    --table-header-bg: #80deea; /* User: Table Header */
+    --table-border-color: #4dd0e1; /* Adjusted border */
+    --accent-color: #00796b; /* User: Accent */
+    --link-color: #006064; /* Adjusted link color */
+}
+/* Adjust Ocean zebra striping */
+body.theme-ocean tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.04); /* Subtle dark striping for light Ocean theme */
+}
+
+/* --- Additional Dark Themes --- */
+
+/* Black & Grey Theme */
+body.theme-black-grey {
+    --bg-color: #000000;
+    --text-color: #cccccc;
+    --header-bg: #111111;
+    --table-header-bg: #222222;
+    --table-border-color: #333333;
+    --accent-color: #aaaaaa;
+    --link-color: #bbbbbb;
+}
+body.theme-black-grey tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Deep Space Theme */
+body.theme-deep-space {
+    --bg-color: #1a1a2e;
+    --text-color: #e0e0fc;
+    --header-bg: #10101e;
+    --table-header-bg: #2a2a4e;
+    --table-border-color: #3a3a5e;
+    --accent-color: #9a8cff;
+    --link-color: #b0a0ff;
+}
+body.theme-deep-space tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Charcoal Theme */
+body.theme-charcoal {
+    --bg-color: #363636;
+    --text-color: #e0e0e0;
+    --header-bg: #262626;
+    --table-header-bg: #464646;
+    --table-border-color: #565656;
+    --accent-color: #aaaaaa;
+    --link-color: #cccccc;
+}
+body.theme-charcoal tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Midnight Theme */
+body.theme-midnight {
+    --bg-color: #191970; /* Midnight Blue */
+    --text-color: #e6e6fa; /* Lavender */
+    --header-bg: #0f0f4a;
+    --table-header-bg: #292980;
+    --table-border-color: #393990;
+    --accent-color: #87cefa; /* Light Sky Blue */
+    --link-color: #add8e6; /* Light Blue */
+}
+body.theme-midnight tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Slate Theme */
+body.theme-slate {
+    --bg-color: #2f4f4f; /* Dark Slate Gray */
+    --text-color: #e0eeee; /* Pale Turquoise */
+    --header-bg: #1f3f3f;
+    --table-header-bg: #3f5f5f;
+    --table-border-color: #4f6f6f;
+    --accent-color: #00ffff; /* Bright Cyan (User Request) */
+    --link-color: #afeeee; /* Pale Turquoise */
+}
+body.theme-slate tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Forest Night Theme */
+body.theme-forest-night {
+    --bg-color: #1a2a1a;
+    --text-color: #d0e0d0;
+    --header-bg: #0a1a0a;
+    --table-header-bg: #2a4a2a;
+    --table-border-color: #3a5a3a;
+    --accent-color: #66bb6a; /* Medium Green */
+    --link-color: #81c784; /* Light Green */
+}
+body.theme-forest-night tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Blender Theme */
+body.theme-blender {
+    --bg-color: #252525; /* Darker background for body/gaps */
+    --section-bg-color: #2E2E2E; /* Original panel background for sections */
+    --text-color: #FFFFFF; /* User: Default text color */
+    --header-bg: #3C3C3C; /* User: Tab/header background */
+    --table-header-bg: #3C3C3C; /* Using header bg for table header */
+    --table-border-color: #1E1E1E; /* User: Lines or separators */
+    --accent-color: #F57900; /* User: Highlight */
+    --link-color: #77AADD; /* Derived link color */
+}
+/* Adjust Blender zebra striping */
+body.theme-blender tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.04); /* Subtle striping */
+}
+
+/* Dark Ember Theme */
+body.theme-dark-ember {
+    --bg-color: #121212; /* User: Main background color */
+    --section-bg-color: #1E1E1E; /* User: Card/Panel */
+    --text-color: #EAEAEA; /* User: Primary Text */
+    --header-bg: #1E1E1E; /* Using Card/Panel for header */
+    --table-header-bg: #2A2A2A; /* User: Input Field (as table header) */
+    --table-border-color: #1A1A1A; /* User: Border/Divider */
+    --accent-color: #FFA500; /* Orange */
+    --link-color: #e69500; /* Adjusted link color */
+}
+/* Adjust Dark Ember zebra striping */
+body.theme-dark-ember tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.03); /* Very subtle striping */
+}
+/* Dark Ember Table Text Adjustment */
+body.theme-dark-ember table tbody td:first-child { /* Target Action column */
+    color: #888888; /* User: Secondary Text */
+}
+body.theme-dark-ember table tbody td:last-child { /* Ensure Shortcut column uses primary */
+    color: var(--text-color); /* Use the theme's primary text color */
+}
+
+/* Layout Variations */
+body.layout-compact {
+    --section-gap: 10px;
+    --table-padding: 5px;
+    --base-font-size: 14px;
+}
+body.layout-wide {
+    --section-gap: 30px;
+    --table-padding: 15px;
+    --base-font-size: 17px;
+}
+/* Apply font size change from variable */
+body {
+    font-size: var(--base-font-size);
+}
+
+
+/* Header */
+header {
+    background-color: var(--header-bg);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--table-border-color);
+}
+
+/* Legend Dropdown Styles */
+#legend-container {
+    position: relative; /* Needed for absolute positioning of popup */
+    display: inline-block; /* Keep it inline with other controls */
+    margin-left: 15px; /* Space from theme select */
+}
+
+#legend-toggle {
+    padding: 5px 10px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--table-border-color);
+    border-radius: 8px; /* Match select roundness */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#legend-toggle:hover {
+    background-color: var(--table-header-bg); /* Slight hover effect */
+}
+
+#legend-popup {
+    position: absolute;
+    top: 100%; /* Position below the button */
+    right: 0; /* Align to the right edge of the container */
+    background-color: var(--header-bg); /* Use header background */
+    border: 1px solid var(--table-border-color);
+    border-radius: 8px;
+    padding: 15px;
+    min-width: 250px; /* Ensure decent width */
+    z-index: 110; /* Ensure it's above other header content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 5px; /* Small gap from button */
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+#legend-popup.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+#legend-popup.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#legend-popup h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--table-border-color);
+    font-size: 1.1em; /* Slightly smaller than section titles */
+    color: var(--accent-color);
+}
+
+#legend-popup ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+#legend-popup li {
+    margin-bottom: 5px;
+}
+
+.header-title-group {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center items */
+}
+
+header h1 {
+    font-size: 1.5em; /* Adjust based on base font size if needed */
+    /* margin-left removed, handled by logo margin */
+}
+
+#header-logo {
+    height: 2em; /* Control logo size based on font size */
+    /* vertical-align removed, handled by flexbox */
+    margin-right: 10px; /* Space between logo and title */
+}
+
+.controls label {
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.controls select {
+    padding: 5px;
+    background-color: var(--bg-color); /* Use body bg for select */
+    color: var(--text-color);
+    border: 1px solid var(--table-border-color);
+    border-radius: 8px; /* Doubled roundness */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Add transition */
+}
+
+/* Main Content Area */
+#cheatsheet-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--section-gap);
+    padding: 0 var(--section-gap); /* Add horizontal padding */
+    justify-content: center; /* Center sections if they don't fill width */
+}
+
+section {
+    border: 1px solid var(--table-border-color);
+    border-radius: 10px; /* Doubled roundness */
+    padding: 15px;
+    /* Use specific section bg if defined, otherwise fallback to main bg */
+    background-color: var(--section-bg-color, var(--bg-color));
+    flex: 1 1 300px; /* Allow sections to grow and shrink, base width 300px */
+    min-width: 250px; /* Prevent sections from becoming too narrow */
+}
+
+section h2 {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--table-border-color);
+    font-size: 1.2em;
+    color: var(--accent-color);
+}
+
+/* Legend Styling */
+#legend ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+#legend li {
+    margin-bottom: 5px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 0; /* Remove space below table */
+}
+
+/* --- Theme-Specific Hover Overrides --- */
+
+/* Black & Grey Hover */
+body.theme-black-grey tbody tr:hover {
+    outline-color: #fffacd; /* Soft Yellow */
+}
+body.theme-black-grey table tbody tr:hover td:first-child {
+    color: #fffacd; /* Soft Yellow */
+}
+
+/* Charcoal Hover */
+body.theme-charcoal tbody tr:hover {
+    outline-color: #1e90ff; /* Bright Blue */
+}
+body.theme-charcoal table tbody tr:hover td:first-child {
+    color: #1e90ff; /* Bright Blue */
+}
+
+/* Slate Hover */
+body.theme-slate tbody tr:hover {
+    outline-color: #00ffff; /* Bright Cyan */
+}
+body.theme-slate table tbody tr:hover td:first-child {
+    color: #00ffff; /* Bright Cyan */
+}
+
+/* Table Row Hover Effect */
+tbody tr:hover {
+    cursor: default; /* Indicate it's not clickable */
+    /* Removed background-color change */
+    outline: 2px solid var(--accent-color); /* Use theme's accent color for outline */
+    outline-offset: -2px; /* Adjust offset for thicker outline */
+}
+
+/* Change Action text color on hover */
+/* Increased specificity by adding 'table' */
+table tbody tr:hover td:first-child { /* Target first cell (Action) */
+    color: var(--accent-color); /* Use theme's accent color for text */
+}
+/* Removed specific light theme background hover rules */
+
+th, td {
+    border: 1px solid var(--table-border-color);
+    padding: var(--table-padding);
+    text-align: left;
+    vertical-align: top; /* Align content to top */
+    transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out; /* Add color transition */
+}
+
+th {
+    background-color: var(--table-header-bg);
+    font-weight: bold;
+}
+
+td:last-child { /* Shortcut column */
+    font-family: monospace; /* Often good for key combos */
+    /* Removed white-space: nowrap; to allow wrapping */
+}
+
+/* Zebra striping for tables */
+tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.04); /* Subtle striping for dark theme */
+}
+body.theme-light tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.03); /* Subtle striping for light theme */
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
